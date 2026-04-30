@@ -14,7 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('🍲 Recipes API is running...');
+});
 app.use('/api/recipes', recipeRoutes);
+
 
 // Server
 const PORT = process.env.PORT || 5000;
